@@ -1,12 +1,28 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: qle-guen <qle-guen@42.fr>                  +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2016/01/06 13:10:26 by qle-guen          #+#    #+#             */
+/*   Updated: 2016/02/11 19:01:41 by qle-guen         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-int	ft_strlen(char *str)
+size_t		ft_strlen(char const *str)
 {
-	int i;
+	char	*s;
+	size_t	len;
 
-	while(str[i] != '\0')
+	s = (char *)str;
+	len = 0;
+	while (*s)
 	{
-		i++;
+		s++;
+		len++;
 	}
-	return(i);
+	return (len);
 }
